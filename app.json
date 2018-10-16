@@ -1,0 +1,55 @@
+{
+  "pages":[
+    "pages/user/user",
+    "pages/login/login",
+    "pages/map/map",
+    "pages/gongchengxiangmu/gongchengxiangmu",
+    "pages/photo/photo",
+    "pages/index/index",
+    "pages/xunjianjilv/xunjianjilv",
+    "pages/xunjianjilvxiangqing/xunjianjilvxiangqing",
+    "pages/shezhi/shezhi",
+    "pages/chakantongzhi/chakantongzhi",
+    "pages/zhenggaixiang/zhenggaixiang",
+    "pages/zhenggaichulixiangqing/zhenggaichulixiangqing",
+    "pages/shijiankongjian/shijiankongjian",
+    "pages/shuiyin/shuiyin",
+    "pages/fenqu/fenqu",
+    "pages/fenqushow/fenqushow",
+    "pages/fenqucheck/fenqucheck",
+    "pages/richangxunjian/richangxunjian",
+    "pages/addzhenggaixiang/addzhenggaixiang",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/user/user",
+      "text": "首页",
+      "iconPath": "image/home.png",
+      "selectedIconPath": "image/selecthome.png"
+    },{
+      "pagePath": "pages/gongchengxiangmu/gongchengxiangmu",
+      "text": "工程项目",
+      "iconPath": "image/gongchen.png",
+      "selectedIconPath": "image/selectgongchen.png"
+    },{
+      "pagePath": "pages/xunjianjilv/xunjianjilv",
+      "text": "巡检记录",
+      "iconPath": "image/record.png",
+      "selectedIconPath": "image/selectrecord.png"
+    },
+    {
+      "pagePath": "pages/shezhi/shezhi",
+      "text": "设置",
+      "iconPath": "image/shezhi.png",
+      "selectedIconPath": "image/selectshezhi.png"
+    }
+    ]
+  }
+}

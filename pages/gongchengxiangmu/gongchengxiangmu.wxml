@@ -1,0 +1,55 @@
+<!-- <view class='topTabSwiper'>
+  <view class='tab  {{currentData == 0 ? "tabBorer" : ""}}' data-current="0" bindtap='checkCurrent'>推荐</view>
+  <view class='tab  {{currentData == 1 ? "tabBorer" : ""}}' data-current="1" bindtap='checkCurrent'>热点</view>
+  <view class='tab  {{currentData == 2 ? "tabBorer" : ""}}' data-current="2" bindtap='checkCurrent'>关注</view>
+</view> -->
+<!-- <swiper current="{{currentData}}" class='swiper' style="height:600px;" duration="300" bindchange="bindchange"> -->
+<!-- <swiper-item> -->
+<view style=" display: flex;">
+  <!-- 下拉框 -->
+  <view class='select_box'>
+    <view class='select' catchtap='selectTap'>
+      <text class='select_text'>{{selectData[index]}}</text>
+    </view>
+    <view class='option_box' style='height:{{show?(selectData.length>5?300:selectData.length*60):0}}rpx;'>
+      <text class='option' style='{{index==selectData.length-1&&"border:0;"}}' wx:for='{{selectData}}' wx:key='this' data-index='{{index}}' catchtap='optionTap'>{{item}}</text>
+    </view>
+  </view>
+  <!-- 下拉框 -->
+  <view class='select_box_2'>
+    <view class='select2' catchtap='selectTap2'>
+      <text class='select_text'>{{selectData2[index2]}}</text>
+    </view>
+    <view class='option_box' style='height:{{show2?(selectData2.length>5?300:selectData2.length*60):0}}rpx;'>
+      <text class='option' style='{{index2==selectData2.length-1&&"border:0;"}}' wx:for='{{selectData2}}' wx:key='this' data-index='{{index}}' catchtap='optionTap2'>{{item}}</text>
+    </view>
+  </view>
+</view>
+
+<view wx:for="{{xiangmubus }}" wx:for-item="xiangmubu" wx:for-index="index" wx:key="{{index}}">
+  <view class='swiper_con'data-index="{{index}}" bindtap='gongchengClick'>
+    <view data-index="{{index}}" style='font-size: 15px;padding:0;'>项目名称：{{xiangmubu.name}}</view>
+    <view data-index="{{index}}" style='font-size: 12px;'>
+      地址：{{xiangmubu.address }}
+    </view>
+    <view data-index="{{index}}" style='font-size: 12px;'>
+      负责人：{{xiangmubu.dateTime}}
+    </view>
+    <view data-index="{{index}}" style='font-size: 12px;'>
+      状态：{{xiangmubu.checkStatusStr}}        
+      已巡：{{xiangmubu.checkFinishCount}}
+      计划：{{xiangmubu.checkPlanCount}}
+      <image class='foeward' data-index="{{index}}" src='../../image/forward.png'></image>
+    </view>
+  </view>
+</view>
+<!-- <view class='swiper_con'>welcome come to 推荐</view>
+<view class='swiper_con'>welcome come to 推荐</view> -->
+<!-- </swiper-item>
+  <swiper-item>
+    <view class='swiper_con'>welcome come to 热点</view>
+  </swiper-item>
+  <swiper-item>
+    <view class='swiper_con'>welcome come to 关注</view>
+  </swiper-item>
+</swiper> -->

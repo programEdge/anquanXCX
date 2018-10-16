@@ -1,0 +1,14 @@
+#logo{
+  height: 100px;
+  width: 100%;
+}
+input{
+  border: 1px solid black;
+  height: 30px;
+}
+.login-item-info{
+  margin-top: 10px;
+}
+.login-btn{
+  background-color: 	#DCDCDC;
+}

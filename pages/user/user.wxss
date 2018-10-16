@@ -1,0 +1,26 @@
+/* pages/user/user.wxss */
+.tou{
+  background-color: #00a0e9;
+
+}
+.touxiang{
+  margin-top: 10px;
+  margin-left: 10px;
+  height: 100px;
+  width: 80px;
+}
+.touzuo{
+  font-size: 14px;
+  display: inline-block;
+}
+.index-container{
+  border: 1px solid LightGrey; 
+  height: 100%;
+  width: 100%;
+}
+.foeward{
+  height:40px;
+  width:40px;
+  float:right;
+  margin-top:-45px;
+}

@@ -1,0 +1,86 @@
+<!--pages/richangxunjian/richangxunjian.wxml-->
+<!-- 下拉框 -->
+<view class='bingpai' style=" display: flex;">
+  <view class='zuobian'>巡检工程
+    <text class='xinhao'>*</text>
+  </view>
+  <view class='select_box'>
+    <view class='select' catchtap='selectTap'>
+      <view wx:if="{{selectData.length == 0}}">
+        <text class='select_text'>请选择工程</text>
+      </view>
+      <view wx:else>
+        <text class='select_text'>{{selectData[index].name}}</text>
+      </view>
+    </view>
+    <view class='option_box' style='height:{{show?(selectData.length>5?300:selectData.length*60):0}}rpx;'>
+      <text class='option' style='{{index==selectData.length-1&&"border:0;"}}' wx:for='{{selectData}}' wx:key='this' data-index='{{index}}' catchtap='optionTap'>{{item.name}}</text>
+    </view>
+  </view>
+</view>
+
+<!-- 下拉框 -->
+<view class='bingpai' style=" display: flex;">
+  <view class='zuobian'>巡检工程
+    <text class='xinhao'>*</text>
+  </view>
+  <view class='select_box_2'>
+    <view class='select2' catchtap='selectTap2'>
+      <view wx:if="{{selectData2.length == 0 || index2 == null}}">
+        <text class='select_text'>请选择分区</text>
+      </view>
+      <view wx:else>
+        <!-- 下拉框 -->
+        <text class='select_text'>{{selectData2[index2].areaname}}</text>
+      </view>
+    </view>
+    <view class='option_box_2' style='height:{{show2?(selectData2.length>5?300:selectData2.length*60):0}}rpx;'>
+      <text class='option_2' style='{{index2==selectData2.length-1&&"border:0;"}}' wx:for='{{selectData2}}' wx:key='this' data-index='{{index}}' catchtap='optionTap2'>{{item.areaname}}</text>
+    </view>
+  </view>
+</view>
+
+<view wx:if="{{selectData2.length != 0 && index2 != null}}">
+  <view class='bingpai' style=" display: flex;">
+    <view class='zuobian'>
+      检查内容
+    </view>
+    <view>
+      <textarea class='area' bindinput='bindWordLimit'></textarea>
+    </view>
+  </view>
+  <button class='zhenggaiBtn' bindtap='zhenggaiClick'>添加整改项</button>
+  <block wx:if="{{zhenggaiSubjects.length != 0}}">
+  <view class="tui-picker-content">
+    <!-- <view class="tui-picker-name">日期选择器（选择年月日）</view> -->
+    <picker mode="date" value="{{date}}" bindchange="changeDate">
+      <view class="tui-picker-detail">
+        <view wx:if="{{date != null}}">
+          <view style=" display: flex;">
+            <view class='text'>整改截止日期
+              <text class='xinhao'>*</text>
+            </view>
+            <view class='datatime'>{{date}}</view>
+            <image style=' height:30px; width:30px;margin-top:5px;' src='../../image/datatime.png' />
+          </view>
+        </view>
+        <view wx:else>
+          <view style=" display: flex;">
+            <view class='zuobian'>整改截止日期
+              <text class='xinhao'>*</text>
+            </view>
+            <view class='datatime'></view>
+            <image style=' height:30px; width:30px;margin-top:5px;' src='../../image/datatime.png' />
+          </view>
+        </view>
+      </view>
+    </picker>
+  </view>
+</block>
+  <!-- <view class='zuobian'>是否停工整改</view> -->
+  <!-- <view style=" display: flex;">
+    <view class='zuobian'>仅创建人审核</view>
+    <view class='zuobian'><text>□</text><text>☑</text></view>
+  </view> -->
+</view>
+<view bindtap='xunjianClick' class='xunjianBtn'>提 交</view>

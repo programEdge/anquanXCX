@@ -1,0 +1,27 @@
+<view class="weui-cell">
+  <view class="weui-cell__bd">
+    <view class="weui-uploader">
+      <view class="weui-uploader__hd">
+        <view class="weui-uploader__title">点击可预览选好的图片</view>
+        <view class="weui-uploader__info">{{pics.length}}/30</view>
+        <view bindtap='photoClick' class='photoBtn' >提交</view>
+      </view>
+      <view class="weui-uploader__bd">
+        <view class="weui-uploader__files">
+          <block wx:for="{{pics}}" wx:for-item="image" data-index="{{index}}">
+            <view data-index="{{index}}" class="weui-uploader__file" bindlongpress="deleteImage">
+              <image data-index="{{index}}" class="weui-uploader__img" src="{{image}}" data-src="{{image}}" bindtap="previewImage"></image>
+            
+            </view>
+          </block>
+        </view>
+        <!-- isShow 这个是判断是否进行触发点隐藏操作 -->
+        <view class="weui-uploader__input-box {{isShow?'true':'hideTrue'}}">
+          <view class="weui-uploader__input" bindtap="chooseImage">
+
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

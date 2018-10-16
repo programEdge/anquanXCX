@@ -1,0 +1,20 @@
+<!--pages/fenqu/fenqu.wxml-->
+<view wx:for="{{fenqulist }}" wx:for-item="fenqu" wx:for-index="index" wx:key="{{index}}">
+  <view class='swiper_con' data-index="{{index}}" bindtouchstart="handleTouchStart" bindtouchend="handleTouchEnd" bindlongpress="handleLongPress" bindtap="fenquClick">
+
+    <view data-index="{{index}}" class='text_2'>区域名称：{{fenqu.areaname}}</view>
+    <view data-index="{{index}}" class='text'>
+      项目：{{fenqu.projectName }}
+    </view>
+    <view data-index="{{index}}" class='text'>
+      区域安全员：{{fenqu.securityer}}
+    </view>
+    <view data-index="{{index}}" class='text'>
+      区域负责人：{{fenqu.manager}} {{fenqu.managerTel}}
+    </view>
+    <view data-index="{{index}}" class='text'>
+      区域范围：{{fenqu.range}}
+      <image class='foeward' data-index="{{index}}" src='../../image/forward.png'></image>
+    </view>
+  </view>
+</view>

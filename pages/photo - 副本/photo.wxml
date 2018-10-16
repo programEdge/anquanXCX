@@ -1,0 +1,7 @@
+<!--pages/photo/photo.wxml-->
+
+<view style="margin:30rpx;" bindtap="chooseimage">获取图片</view>
+<view wx:for="{{tempFilePaths }}"  wx:for-item="tempFilePath" wx:for-index="index"  wx:key="{{index}}">
+  <image data-index="{{index}}" src="{{tempFilePath }}" mode="aspecFill" style="width: 100%; height: 450rpx"/>
+</view>
+

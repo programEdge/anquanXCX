@@ -1,0 +1,23 @@
+<!--pages/fenqucheck/fenqucheck.wxml-->
+    <scroll-view scroll-y="true" style="height: 500px;">
+      <view class="scroll-y">
+        <view wx:for="{{checklist}}" wx:for-item="check" wx:for-index="index" wx:key="{{index}}">
+            <view class='swiper_con' data-index="{{index}}" bindtap='checkClick'>
+              <view data-index="{{index}}" style='font-size: 15px;padding:0;'>工程：{{check.project}}</view>
+              <view data-index="{{index}}" style='font-size: 12px;'>
+                地址：{{check.projectAddress }}
+              </view>
+              <view data-index="{{index}}" style='font-size: 12px;'>
+                巡检记录：{{check.planDate}}
+              </view>
+              <view data-index="{{index}}" style='font-size: 12px;'>
+                巡检员：{{check.checker}}
+              </view>
+              <view data-index="{{index}}" style='font-size: 12px;'>
+                巡检状态：{{check.statusStr}}
+                <image class='foeward' data-index="{{index}}" src='../../image/forward.png'></image>
+              </view>
+            </view>
+          </view>
+      </view>
+    </scroll-view>

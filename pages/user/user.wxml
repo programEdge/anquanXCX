@@ -1,0 +1,44 @@
+<!--pages/user/user.wxml-->
+<!-- <text>pages/user/user.wxml</text> -->
+<view class="tou">
+  <block wx:if="{{photo != ''}}">
+    <image class="touxiang" src="'http://localhost:9400'+'{{photo}}'"></image>
+  </block>
+  <block wx:else>
+    <image class="touxiang" src='../../image/nophoto.jpg'></image>
+  </block>
+  <view class='touzuo'>
+    <view wx:if="{{roleAlias != ''}}">
+      用户：{{roleAlias}}
+    </view>
+    <view wx:else>
+      用户：{{username}}
+    </view>
+    单位：{{unit}}
+    <view wx:if="{{depart != null}}">
+      部门：{{depart}}
+    </view>
+    <view wx:else>
+      项目部：{{xiangmubuName}}
+    </view>
+  </view>
+  <button bindtap='btnClick'>自主巡检</button>
+</view>
+
+<view class='index-container'>
+  <view class='nickname'>
+    <view wx:if="{{roleAlias == '' || roleAlias ==null}}">
+      <view wx:for="{{tongzhixinxis }}" wx:for-item="tongzhixinxi" wx:for-index="index" wx:key="{{index}}">
+        <view bindtap='tongzhiClick' style='border: 1px solid LightGrey;padding:1px;'>
+          <view data-index="{{index}}" style='font-size: 15px;padding:0;'>{{tongzhixinxi.title}}</view>
+          <view data-index="{{index}}" style='font-size: 12px;'>
+            <text decode='true'>
+           发布人：{{tongzhixinxi.user }}&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;发布时间：{{tongzhixinxi.dateTime}}
+         </text>
+            <image class='foeward' src='../../image/forward.png'></image>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

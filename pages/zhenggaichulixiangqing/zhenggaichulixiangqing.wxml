@@ -1,0 +1,79 @@
+<!--pages/zhenggaichulixiangqing/zhenggaichulixiangqing.wxml-->
+
+<view class='text'>项目名称：{{zhenggaiSubject.projectName}}</view>
+<view class='text'>
+  项目地址：{{zhenggaiSubject.projectAddress }}
+</view>
+<view class='text'>
+  项目负责人：{{zhenggaiSubject.projectManagerName}}
+</view>
+<view class='text'>
+  整改创建人：{{zhenggaiSubject.user}}
+</view>
+<view class='text'>
+  整改负责人：{{zhenggaiSubject.linkMan}}
+</view>
+<view class='text'>
+  检查记录：{{zhenggaiSubject.checkRecord}}
+</view>
+<view class='text'>
+  整改要求：{{zhenggaiSubject.text}}
+</view>
+<view class='text'>
+  整改截止时间：{{zhenggaiSubject.offDate}}
+</view>
+<view class='text'>
+  整改状态：{{zhenggaiSubject.statusStr}}
+</view>
+<view wx:if="{{photolist.length > 0}}">
+  <view style=" display: flex;">
+    <view class='text'>
+      现场图片：
+    </view>
+    <view wx:for="{{photolist}}" wx:for-item="photo" wx:for-index="index" wx:key="{{index}}">
+      <image class='foeward' data-index="{{index}}" src='http://139.9.1.229:9400{{photo.path}}'/>
+    </view>
+  </view>
+</view>
+<view wx:else>
+  现场图片：暂无图片
+</view>
+<!-- 根据状态判断 -->
+<view wx:if="{{chuliSubjectlist.length == 0}}">
+  <view style=" display: flex;">
+    <view class='text'>
+      整改处理：
+    </view>
+    <view>
+      <textarea></textarea>
+    </view>
+  </view>
+  <view class="tui-picker-content">
+    <!-- <view class="tui-picker-name">日期选择器（选择年月日）</view> -->
+    <picker mode="date" value="{{date}}" bindchange="changeDate">
+      <view class="tui-picker-detail">
+        <view wx:if="{{date != null}}">
+          <view style=" display: flex;">
+            <view class='text'>处理时间：</view>
+            <view class='datatime'>{{date}}</view>
+            <image style=' height:30px; width:30px;' src='../../image/datatime.png'/>
+          </view>
+        </view>
+        <view wx:else>
+          <view style=" display: flex;">
+            <view class='text'>处理时间：</view>
+            <view class='datatime'></view>
+            <image style=' height:30px; width:30px;margin-top:5px;' src='../../image/datatime.png'/>
+          </view>
+        </view>
+      </view>
+    </picker>
+  </view>
+  <view style=" display: flex;">
+    <view class='text'>
+      处理图片：
+    </view>
+    <view class='photos' bindtap='photoClick'>请选择图片</view>
+    <image style=' height:30px; width:30px;margin-top:5px;' src='../../image/xuanzephoto.png'/>
+  </view>
+</view>

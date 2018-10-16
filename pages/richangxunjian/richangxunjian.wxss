@@ -1,0 +1,163 @@
+/* pages/richangxunjian/richangxunjian.wxss */
+
+/* 下拉框 */
+
+page {
+  background: #f3f7f7;
+}
+
+.select_box {
+  background: #fff;
+  border: 1px solid rgb(77, 75, 75);
+  width: 68%;
+  margin-top: 10px;
+  height: 35px;
+  /* margin: 30rpx auto; */
+  position: relative;
+}
+
+.select_box_2 {
+  background: #fff;
+  margin-top: 10px;
+  border: 1px solid rgb(77, 75, 75);
+  width: 68%;
+  height: 35px;
+  /* margin: 30rpx auto; *//* position: relative; */
+}
+
+.select {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 20rpx;
+}
+
+.select2 {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 20rpx;
+}
+
+.select_text {
+  font-size: 30rpx;
+  flex: 1;
+}
+
+.select_text2 {
+  font-size: 30rpx;
+  flex: 1;
+}
+
+.select_img {
+  width: 40rpx;
+  height: 40rpx;
+  display: block;
+  transition: transform 0.3s;
+}
+
+.select_img_rotate {
+  transform: rotate(180deg);
+}
+
+.option_box {
+  position: absolute;
+  top: 70rpx;
+  width: 100%;
+  border: 1px solid #efefef;
+  box-sizing: border-box;
+  height: 0;
+  overflow-y: auto;
+  border-top: 0;
+  background: #fff;
+  transition: height 0.3s;
+}
+
+.option {
+  display: block;
+  line-height: 40rpx;
+  font-size: 30rpx;
+  border-bottom: 1px solid #efefef;
+  padding: 10rpx;
+}
+
+.option_box_2 {
+  /* position: absolute; */
+  top: 70rpx;
+  width: 100%;
+  border: 1px solid #efefef;
+  box-sizing: border-box;
+  height: 0;
+  overflow-y: auto;
+  border-top: 0;
+  background: #fff;
+  transition: height 0.3s;
+}
+
+.option_2 {
+  display: block;
+  line-height: 40rpx;
+  font-size: 30rpx;
+  border-bottom: 1px solid #efefef;
+  padding: 10rpx;
+}
+
+.foeward {
+  height: 40px;
+  width: 40px;
+  float: right;
+  margin-top: -30px;
+}
+
+.scroll-y {
+  display: flex;
+  flex-direction: column;
+}
+
+.xinhao {
+  color: red;
+  align-items: center;
+}
+
+.zuobian {
+  font-size: 30rpx;
+  padding: 0;
+  margin-top: 10px;
+  width: 120px;
+  height: 30rpx;
+  margin-left: 10px;
+}
+
+.bingpai {
+  margin-top: 10px;
+  align-items: center;
+}
+
+.area {
+  border: 1px solid black;
+  margin-top: 10px;
+  width: 280px;
+}
+
+.xunjianBtn {
+  background-color: #00a0e9;
+  color: white;
+  margin-top: 10px;
+  height: 46px;
+  line-height: 45px;
+  font-size: 22px;
+  text-align: center;
+  align-items: center;
+}
+
+.zhenggaiBtn {
+  background-color: DarkGray;
+  margin-top: 10px;
+  color: white;
+}
+
+.datatime{
+  height:30px;
+  width:160px;
+  border: 1px solid black;
+  margin-top:5px;
+
+}

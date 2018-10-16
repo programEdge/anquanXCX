@@ -1,0 +1,17 @@
+<!--pages/chakantongzhi/chakantongzhi.wxml-->
+  <view class='hang' >
+     标题:{{title}}
+  </view>
+  <view class='hang' >
+     发布人:{{user}}
+  </view>
+  <view class='hang' >
+     发布时间:{{dateTime}}
+  </view>
+  <view class='hang' >
+     阅读次数:{{yueduNum}}
+  </view>
+  <view class='hang' >
+     内容:{{content}}
+  </view>
+  <!-- <button class='fanhui' bindtap='fanhuiBtnCLick'>返回</button> -->

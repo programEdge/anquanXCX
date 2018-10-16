@@ -1,0 +1,29 @@
+<!--pages/fenqushow/fenqushow.wxml-->
+<view style=" display: flex;">
+  <view class='text'>项目名称</view>
+  <view class='text_2'>{{fenqu.projectName}}</view>
+</view>
+<view style=" display: flex;">
+  <view class='text'>项目类型</view>
+  <view class='text_2'>{{fenqu.type }}</view>
+</view>
+<view style=" display: flex;">
+  <view class='text'> 区域名称</view>
+  <view class='text_2'>{{fenqu.areaname}} </view>
+</view>
+<view style=" display: flex;">
+  <view class='text'>区域范围</view>
+  <view class='text_2'>{{fenqu.range}} </view>
+</view>
+<view style=" display: flex;">
+  <view class='text'> 区域安全员</view>
+  <view class='text_2'>{{fenqu.securityer}}</view>
+</view>
+<view style=" display: flex;">
+  <view class='text'> 区域负责人</view>
+  <view class='text_2'>{{fenqu.manager}} </view>
+</view>
+<view style=" display: flex;">
+  <view class='text'> 负责人电话</view>
+  <view class='text_2'>{{fenqu.managerTel}} </view>
+</view>

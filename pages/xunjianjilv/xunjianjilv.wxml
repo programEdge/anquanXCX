@@ -1,0 +1,120 @@
+<!-- 上切换 -->
+
+
+<view class='topTabSwiper'>
+  <view class='tab  {{currentData == 0 ? "tabBorer" : ""}}' data-current="0" bindtap='checkCurrent'>在检</view>
+  <view class='tab  {{currentData == 1 ? "tabBorer" : ""}}' data-current="1" bindtap='checkCurrent'>整改</view>
+  <view class='tab  {{currentData == 2 ? "tabBorer" : ""}}' data-current="2" bindtap='checkCurrent'>完成</view>
+</view>
+<swiper current="{{currentData}}" class='swiper' style="height:600px;" duration="300" bindchange="bindchange">
+  <swiper-item>
+    <scroll-view scroll-y="true" style="height: 500px;">
+      <view class="scroll-y">
+        <!-- 下拉框 -->
+        <view class='select_box'>
+          <view class='select' catchtap='selectTap'>
+            <text class='select_text'>{{selectData[index]}}</text>
+          </view>
+          <view class='option_box' style='height:{{show?(selectData.length>5?300:selectData.length*60):0}}rpx;'>
+            <text class='option' style='{{index==selectData.length-1&&"border:0;"}}' wx:for='{{selectData}}' wx:key='this' data-index='{{index}}' catchtap='optionTap'>{{item}}</text>
+          </view>
+        </view>
+        <view wx:for="{{checklist}}" wx:for-item="check" wx:for-index="index" wx:key="{{index}}">
+          <!-- 根据状态判断 -->
+          <view wx:if="{{check.status == 'xjz'}}">
+            <view class='swiper_con' data-index="{{index}}" bindtap='checkClick'>
+              <view data-index="{{index}}" style='font-size: 15px;padding:0;'>工程：{{check.project}}</view>
+              <view data-index="{{index}}" style='font-size: 12px;'>
+                地址：{{check.projectAddress }}
+              </view>
+              <view data-index="{{index}}" style='font-size: 12px;'>
+                巡检记录：{{check.planDate}}
+              </view>
+              <view data-index="{{index}}" style='font-size: 12px;'>
+                巡检员：{{check.checker}}
+              </view>
+              <view data-index="{{index}}" style='font-size: 12px;'>
+                巡检状态：{{check.statusStr}}
+                <image class='foeward' data-index="{{index}}" src='../../image/forward.png'></image>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </swiper-item>
+
+  <swiper-item>
+    <scroll-view scroll-y="true" style="height: 500px;">
+      <view class="scroll-y">
+        <!-- 下拉框 -->
+        <view class='select_box'>
+          <view class='select' catchtap='selectTap'>
+            <text class='select_text'>{{selectData[index]}}</text>
+          </view>
+          <view class='option_box' style='height:{{show?(selectData.length>5?300:selectData.length*60):0}}rpx;'>
+            <text class='option' style='{{index==selectData.length-1&&"border:0;"}}' wx:for='{{selectData}}' wx:key='this' data-index='{{index}}' catchtap='optionTap'>{{item}}</text>
+          </view>
+        </view>
+        <view wx:for="{{checklist}}" wx:for-item="check" wx:for-index="index" wx:key="{{index}}">
+          <!-- 根据状态判断 -->
+          <view wx:if="{{check.status == 'zgz' || check.status == 'zgbh' || check.status == 'zgcs' || check.status == 'zgshz'}}">
+            <view class='swiper_con' bindtap='checkClick'>
+              <view data-index="{{index}}" style='font-size: 15px;padding:0;'>项目：{{check.project}}</view>
+              <view data-index="{{index}}" style='font-size: 12px;'>
+                地址：{{check.projectAddress }}
+              </view>
+              <view data-index="{{index}}" style='font-size: 12px;'>
+                巡检记录：{{check.planDate}}
+              </view>
+              <view data-index="{{index}}" style='font-size: 12px;'>
+                巡检员：{{check.checker}}
+              </view>
+              <view data-index="{{index}}" style='font-size: 12px;'>
+                巡检状态：{{check.statusStr}}
+                <image class='foeward' src='../../image/forward.png'></image>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </swiper-item>
+  <swiper-item>
+    <scroll-view scroll-y="true" style="height: 500px;">
+      <view class="scroll-y">
+        <!-- 下拉框 -->
+        <view class='select_box'>
+          <view class='select' catchtap='selectTap'>
+            <text class='select_text'>{{selectData[index]}}</text>
+          </view>
+          <view class='option_box' style='height:{{show?(selectData.length>5?300:selectData.length*60):0}}rpx;'>
+            <text class='option' style='{{index==selectData.length-1&&"border:0;"}}' wx:for='{{selectData}}' wx:key='this' data-index='{{index}}' catchtap='optionTap'>{{item}}</text>
+          </view>
+        </view>
+
+        <view wx:for="{{checklist}}" wx:for-item="check" wx:for-index="index" wx:key="{{index}}">
+          <!-- 根据状态判断 -->
+          <view wx:if="{{check.status == 'wc' || check.status == 'zgwc'}}">
+            <view class='swiper_con' bindtap='checkClick'>
+              <view data-index="{{index}}" style='font-size: 15px;padding:0;'>项目：{{check.project}}</view>
+              <view data-index="{{index}}" style='font-size: 12px;'>
+                地址：{{check.projectAddress }}
+              </view>
+              <view data-index="{{index}}" style='font-size: 12px;'>
+                巡检记录：{{check.planDate}}
+              </view>
+              <view data-index="{{index}}" style='font-size: 12px;'>
+                巡检员：{{check.checker}}
+              </view>
+              <view data-index="{{index}}" style='font-size: 12px;'>
+                巡检状态：{{check.statusStr}}
+                <image class='foeward' src='../../image/forward.png'></image>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </swiper-item>
+</swiper>

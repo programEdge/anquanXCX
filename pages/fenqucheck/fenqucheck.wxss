@@ -1,0 +1,15 @@
+/* pages/fenqucheck/fenqucheck.wxss */
+.foeward{
+  height:40px;
+  width:40px;
+  float:right;
+  margin-top:-30px;
+}
+.scroll-y {
+  display: flex;
+  flex-direction: column; 
+}
+.swiper_con {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}

@@ -1,0 +1,26 @@
+<view class='mcontainer'>
+  <view class='item'>
+   <image src='/image/logo.png' id='logo'></image>
+  </view>
+  <view class='item'>
+    <view class='login-item'>
+      <view class='login-item-info'>用户名</view>
+      <view><input bindinput='usernameInput' /></view>
+    </view>
+    <view class='login-item'>
+      <view class='login-item-info'>密码</view>
+      <view class='login-pwd'>
+        <input bindinput='passwordInput' style='flex-grow:1' password='true'/>
+        <text>忘记密码</text>
+      </view>
+    </view>
+    <view class='login-item-info'>
+      <button class='login-btn' bindtap='loginBtnClick'>登录</button>
+    </view>
+  </view>
+  <view class='item botton-info'>
+    <view>没有账户？<text>注册</text></view>
+
+  </view>
+
+</view>

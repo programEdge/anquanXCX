@@ -1,0 +1,36 @@
+/* pages/zhenggaichulixiangqing/zhenggaichulixiangqing.wxss */
+textarea{
+  border: 1px solid black;
+  /* float: left; */
+}
+.foeward{
+  height:80px;
+  width:80px;
+  margin-top:5px;
+}
+.datatime{
+  height:30px;
+  width:160px;
+  border: 1px solid black;
+  margin-top:5px;
+
+}
+
+.text{
+  font-size: 15px;
+  padding:0;
+  margin-top: 5px;
+}
+
+.dataphoto{
+  height:20px;
+  width:20x;
+  margin-top:5px;
+}
+
+.photos{
+  height:30px;
+  width:160px;
+  border: 1px solid black;
+  margin-top:5px;
+}

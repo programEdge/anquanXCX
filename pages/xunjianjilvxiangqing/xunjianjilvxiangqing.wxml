@@ -1,0 +1,34 @@
+<!--pages/fenqushow/fenqushow.wxml-->
+<view style=" display: flex;">
+  <view class='text'>项目名称</view>
+  <view class='text_2'>{{check.project}}</view>
+</view>
+<view style=" display: flex;">
+  <view class='text'>项目地址</view>
+  <view class='text_2'>{{check.projectAddress }}</view>
+</view>
+<view style=" display: flex;">
+  <view class='text'> 项目负责人</view>
+  <view class='text_2'>{{check.projectManagerName}} </view>
+</view>
+<view style=" display: flex;">
+  <view class='text'>巡检日期</view>
+  <view class='text_2'>{{check.checkDate}} </view>
+</view>
+<view style=" display: flex;">
+  <view class='text'> 巡检人员</view>
+  <view class='text_2'>{{check.user}}</view>
+</view>
+<view style=" display: flex;">
+  <view class='text'> 巡检内容</view>
+  <view class='text_2'>{{check.text}} </view>
+</view>
+<view style=" display: flex;">
+  <view class='text'> 是否通知现场人员</view>
+  <block wx:if="{{check.isCall == 0}}">
+    <view class='text_2'>否</view>
+  </block>
+<block wx:else>
+  <view class='text_2'>{{check.isCall}}</view>
+</block>
+</view>

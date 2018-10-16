@@ -1,0 +1,4 @@
+<!--index.wxml-->
+<view>
+<button bindtap='bindtest'>连接测试</button>
+</view>
